@@ -17,7 +17,7 @@
      </example>
      *
      */
-    angular.module('wds.global.filters.percentage', [])
+    angular.module('filters.percentage', [])
         .filter('percentage', function () {
             return function (input, decimals, suffix) {
                 decimals = angular.isNumber(decimals) ? decimals :  3;
