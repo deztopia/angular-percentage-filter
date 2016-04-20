@@ -21,7 +21,7 @@
         .filter('percentage', function () {
             return function (input, decimals, suffix) {
                 decimals = angular.isNumber(decimals) ? decimals :  3;
-                suffix = symbol || '%';
+                suffix = suffix || '%';
                 if (Number.isNaN(input)) {
                     return '';
                 }
