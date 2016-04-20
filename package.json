@@ -1,0 +1,16 @@
+{
+  "name": "angular-percentage-filter",
+  "version": "1.0.2",
+  "description": "Percentage filter for angular.js",
+  "main": "percentage.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/deztopia/angular-percentage-filter.git"
+  },
+  "keywords": [
+    "angular",
+    "percentage",
+    "filter"
+  ],
+  "license": "MIT"
+}
