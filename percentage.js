@@ -20,16 +20,17 @@
      *
      */
     angular.module('filters.percentage', [])
-        .filter('percentage', function () {
-            return function (input, decimals, suffix) {
-                decimals = angular.isNumber(decimals) ? decimals :  3;
-                suffix = suffix || '%';
-                input = Number(input);
-                if (Number.isNaN(input)) {
-                    return '';
-                }
+        .filter('percentage', [
+            '$window',
+            function ($window) {
+                return function (input, decimals, suffix) {
+                    decimals = angular.isNumber(decimals) ? decimals :  3;
+                    suffix = suffix || '%';
+                    if ($window.isNaN(input)) {
+                        return '';
+                    }
 
-                return Math.round(input * Math.pow(10, decimals + 2))/Math.pow(10, decimals) + suffix;
+                    return Math.round(input * Math.pow(10, decimals + 2))/Math.pow(10, decimals) + suffix;
             };
-        });
+        }]);
 })(window, window.angular);
